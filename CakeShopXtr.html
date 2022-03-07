@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Torte</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /*Estilo del header*/
+        header{
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+            color: black;
+        }
+        /*Creamos 2 columnas con la misma posición en la fila*/
+        nav{
+            float: right;
+            width:  30%;
+            height: 300px;
+            /*Sólo para demostraciones, debería ser removido*/
+            background: white;
+            padding: 40px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0%;
+            font-size: 15px;
+            color: black;
+            
+        }
+        article{
+            float: left;
+            padding: 20px;
+            width: 69%;
+            background-color: black;
+            height: 300px;
+            font-size: 15px;
+        }
+        /*Clear floats after the columns*/
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*Estilo de footer*/
+        footer{
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+            color: black;
+        }
+        /*Responsive layout*/
+        @media (max-width: 600px){
+            nav,
+            article{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/1064/1064882.png" alt="DIE TORTE pastelería" height="200px">
+        <h2>DIE TORTE</h2>
+    </header>
+    <footer>
+        <h3> - Explora nuestra variedad de diseños y sabores -</h3>
+    </footer>
+    <section>
+        <nav>
+            <ul>
+                <h2>Sobre nosostros...</h2>
+                <p>Empresa de pastelería online, segumos estándares de calidad y nos adaptamos a los requerimientos de personalización.</p>
+            </ul>
+        </nav>
+        <article>
+            <h1>Registrate / inicia sesión</h1>
+            <label for="correo1"></label>
+            <input type="email" id="correo1" name="correo1" placeholder="Correo"><br><br>
+            <label for="tel1"></label>
+            <input type="tel" id="tel1" name="tel1" maxlength="15" placeholder="Número Telefónico"><br>
+            <label for="psw1"></label><br>
+            <input type="password" id="psw1" name="psw1" placeholder="Contraseña"><br><br>
+            <input type="text" id="des" name="des" placeholder="Descripción de orde"> <br> <br>
+            <button type="submit">Enviar</button>
+        </article>
+        <nav>
+            <ul>
+                <h2>Die Praline</h2>
+                <li>Precio - 400 $</li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Pastel de chocolate</h1>
+            <p>Relleno de chocolate, bloques de cacao, espolvoreado de canela con grabado de nombre.</p>
+        </article>
+        <nav>
+            <ul>
+                <h2>Fraise</h2>
+                <li>Precio - 500 $</li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Pastel de rosas y fresas</h1>
+            <p>Relleno de mousse de fresa, aroma a rosas, espolvoreado de azúcar glass.</p>
+        </article>
+        <nav>
+            <ul>
+                <h2>ROT</h2>
+                <li>Precio - 400 $</li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Pastel Red Velvet y arándanos</h1>
+            <p>Relleno de vainilla y cubierta de chocolate blanco con arándanos frescos.</p>
+        </article>
+        
+        <nav>
+            <ul>
+                <h2>Pasteles Redondos</h2>
+                <li>Específicaciones</li>
+            </ul>
+        </nav>
+        <article>
+            <ol>
+                <h2>Tamaño estándar</h2>
+                <li>Centímetros = 20</li>
+                <li>Porciones = 8-10</li>
+            </ol>
+        </article>
+    </section>
+    <footer>
+        <p><footer>DIE TORTE</footer></p>
+    </footer>
+</body>
+</html>

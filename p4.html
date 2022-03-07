@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica_4_Layout_Rutas</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /*Estilo del header*/
+        header{
+            background-color: crimson;
+            padding: 40px;
+            text-align: center;
+            font-size: 39px;
+            color: ghostwhite;
+        }
+        /*Creamos 2 columnas con la misma posición en la fila*/
+        nav{
+            float: left;
+            width:  30%;
+            height: 200px;
+            /*Sólo para demostraciones, debería ser removido*/
+            background: white;
+            padding: 24px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0%;
+            font-size: 15px;
+            color: black;
+            
+        }
+        article{
+            float: left;
+            padding: 20px;
+            width: 69%;
+            background-color: black;
+            height: 200px;
+        }
+        /*Clear floats after the columns*/
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*Estilo de footer*/
+        footer{
+            background-color: crimson;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /*Responsive layout*/
+        @media (max-width: 600px){
+            nav,
+            article{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Partes principales de un equipo cuántico</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <h2>1_</h2>
+                <li><a href="#">Almacén de cúbits.</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Almacén de cúbits</h1>
+            <p>Un área que aloja los cúbits.</p>
+        </article>
+        <nav>
+            <ul>
+                <h2>2_</h2>
+                <li><a href="#">Método de trasnferencia.</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Método de trasnferencia</h1>
+            <p>Método para trasferir señales a los cúbits.</p>
+        </article>
+        <nav>
+            <ul>
+                <h2>3_</h2>
+                <li><a href="#">Equipo de ejecución.</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Equipo de ejecución</h1>
+            <p>Un equipo clásico para ejecutar un programa y enviar instrucciones.</p>
+        </article>
+    </section>
+    <footer>
+        <p><footer>by Ximena Toledo Rivera</footer></p>
+    </footer>
+</body>
+</html>
